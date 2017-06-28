@@ -17,7 +17,7 @@ This Go application does just that.
 ### If you have Go installed
 
 - `go get github.com/petermbenjamin/petya-killswitch`
-- `cd %GOPATH%/src/github.com/petermbenjamin/petya-killswitch && go build`
+- `cd %GOPATH%\src\github.com\petermbenjamin\petya-killswitch && go build`
 
 ## Usage
 
