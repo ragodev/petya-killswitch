@@ -16,22 +16,22 @@ const (
 	perfcDLL = "C:\\Windows\\perfc.dll"
 	perfcDAT = "C:\\Windows\\perfc.dat"
 
-	READONLY = os.FileMode(os.O_RDONLY)
+	readOnly = os.FileMode(os.O_RDONLY)
 )
 
 func main() {
 	if _, err := os.Stat(perfc); os.IsNotExist(err) {
-		ioutil.WriteFile(perfc, []byte{}, READONLY)
+		ioutil.WriteFile(perfc, []byte{}, readOnly)
 	} else {
 		info("File already exists: %s\nNo action needed", perfc)
 	}
 	if _, err := os.Stat(perfcDLL); os.IsNotExist(err) {
-		ioutil.WriteFile(perfcDLL, []byte{}, READONLY)
+		ioutil.WriteFile(perfcDLL, []byte{}, readOnly)
 	} else {
 		info("File already exists: %s\nNo action needed", perfcDLL)
 	}
 	if _, err := os.Stat(perfcDAT); os.IsNotExist(err) {
-		ioutil.WriteFile(perfcDAT, []byte{}, READONLY)
+		ioutil.WriteFile(perfcDAT, []byte{}, readOnly)
 	} else {
 		info("File already exists: %s\nNo action needed", perfcDAT)
 	}
